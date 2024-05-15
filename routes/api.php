@@ -14,6 +14,7 @@ Route::group(['middleware' => 'auth:sanctum'], static function () {
     Route::delete('/logout', [UserController::class, 'logout']);
     Route::apiResource('/books', BookController::class);
     Route::apiResource('/stores', StoreController::class);
-    Route::apiResource('/store-books', StoreBookController::class);
+    Route::post('/store-books', [StoreBookController::class, 'store']);
+    Route::delete('/store-books/{store_book}', [StoreBookController::class, 'destroy']);
     Route::get('/books/available/{store}', BookAvailableController::class);
 });
