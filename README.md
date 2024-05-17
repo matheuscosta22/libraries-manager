@@ -30,6 +30,19 @@ The project is using SAIL (https://laravel.com/docs/11.x/sail), below are the ma
     ./vendor/bin/sail shell
     ```
 ------------------------------------
+
+After upload the project containers run these commands:
+- To create tables in database
+  ```sh
+    ./vendor/bin/sail artisan migrate
+    ```
+  
+- To seed database
+  ```sh
+    ./vendor/bin/sail artisan db:seed
+    ```
+
+------------------------------------
 If everything is correct, you can now interact with the REST API via port 80 in your local environment. There is already a user to log in email: admin@gmail.com, password: password
 
 The routes are :
